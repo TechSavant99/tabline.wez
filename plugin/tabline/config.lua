@@ -32,7 +32,7 @@ local default_opts = {
       { 'zoomed', padding = 0 },
     },
     tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
-    tabline_x = { 'ram', 'cpu' },
+    tabline_x = { 'ram', 'mode' },
     tabline_y = { 'datetime', 'battery' },
     tabline_z = { 'domain' },
   },
@@ -52,7 +52,7 @@ local function get_colors(theme)
     or colors.background
 
   if type(theme) == 'string' then
-    if string.find(theme, 'Catppuccin') then
+    if string.find(theme, 'Kanagawa (Gogh)') then
       surface = colors.tab_bar.inactive_tab_edge
     end
   end
@@ -79,13 +79,13 @@ local function get_colors(theme)
       c = { fg = colors.foreground, bg = background },
     },
     scroll_mode = {
-      a = { fg = background, bg = colors.ansi[1] },
-      b = { fg = colors.ansi[1], bg = surface },
+      a = { fg = background, bg = colors.ansi[6] },
+      b = { fg = colors.ansi[6], bg = surface },
       c = { fg = colors.foreground, bg = background },
     },
     visual_mode = {
-      a = { fg = background, bg = colors.ansi[1] },
-      b = { fg = colors.ansi[1], bg = surface },
+      a = { fg = background, bg = colors.ansi[7] },
+      b = { fg = colors.ansi[7], bg = surface },
       c = { fg = colors.foreground, bg = background },
     },
     tab = {

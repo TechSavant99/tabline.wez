@@ -5,7 +5,7 @@ local last_result = ''
 
 return {
   default_opts = {
-    throttle = 3,
+    throttle = 1,
     icon = wezterm.nerdfonts.oct_cpu,
     use_pwsh = true,
   },
